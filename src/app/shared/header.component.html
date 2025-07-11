@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="sticky top-0 z-40 flex flex-wrap justify-between items-center px-4 py-2 shadow-md">
+  <div class="flex items-center gap-4">
+    <a routerLink="/" class="flex items-center gap-2">
+      <img src="assets/icons/turfman-logo.png" alt="Turfman Logo" class="h-10 w-auto" />
+      <span class="font-bold text-xl tracking-tight hidden sm:inline">Turfman</span>
+    </a>
+  </div>
+  <nav class="flex gap-2 flex-wrap">
+    <a mat-button routerLink="/" routerLinkActive="font-bold underline" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a mat-button routerLink="/turf-varieties" routerLinkActive="font-bold underline">Turf Varieties</a>
+    <a mat-button routerLink="/pricing" routerLinkActive="font-bold underline">Pricing</a>
+    <a mat-button routerLink="/shop" routerLinkActive="font-bold underline">Buy Now</a>
+    <a mat-button routerLink="/about" routerLinkActive="font-bold underline">About</a>
+    <a mat-button routerLink="/contact" routerLinkActive="font-bold underline">Contact</a>
+  </nav>
+  <div class="hidden md:flex flex-col items-end text-xs">
+    <span>{{ contact.phone.join(', ') }}</span>
+    <span>{{ contact.email }}</span>
+  </div>
+</mat-toolbar> 

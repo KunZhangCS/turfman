@@ -1,0 +1,11 @@
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+  <button mat-fab color="primary" aria-label="Contact Us"
+          (click)="openContactDialog()" matTooltip="Contact Us">
+    <mat-icon>contact_support</mat-icon>
+  </button>
+  <button mat-fab color="accent" aria-label="Shopping Cart"
+          (click)="goToCart()" matTooltip="View Cart">
+    <mat-icon>shopping_cart</mat-icon>
+    <span *ngIf="(cartService.count$ | async) as count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2 py-0.5" [hidden]="count === 0">{{count}}</span>
+  </button>
+</div> 

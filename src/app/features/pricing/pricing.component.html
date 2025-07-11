@@ -1,0 +1,15 @@
+<div class='p-8'>
+  <h2 class='text-3xl font-bold mb-6'>Pricing Guide</h2>
+  <table mat-table [dataSource]="pricing" class='w-full'>
+    <ng-container matColumnDef='name'>
+      <th mat-header-cell *matHeaderCellDef>Turf Type</th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef='price'>
+      <th mat-header-cell *matHeaderCellDef>Price per m²</th>
+      <td mat-cell *matCellDef="let element">${{element.price}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['name', 'price']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'price'];"></tr>
+  </table>
+</div> 
